@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE generatorConfiguration  
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"  
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">  
+<generatorConfiguration>  
+    <classPathEntry location="mysql-connector-java-5.1.25-bin.jar"/>
+    <context id="DB2Tables"  targetRuntime="MyBatis3">
+        <commentGenerator>  
+            <property name="suppressDate" value="true"/>  
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>  
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://115.28.151.225:3306/fxm_zs_compass" userId="root" password="fxm_201707112233">  
+        </jdbcConnection>  
+        <javaTypeResolver>  
+            <property name="forceBigDecimals" value="false"/>  
+        </javaTypeResolver>  
+
+        <javaModelGenerator targetPackage="com.qdingnet.pcloud.api.compass.model" targetProject="src">
+            <property name="enableSubPackages" value="true"/>  
+            <property name="trimStrings" value="true"/>  
+        </javaModelGenerator>  
+
+        <sqlMapGenerator targetPackage="com.qdingnet.pcloud.api.compass.dao.mapper" targetProject="src">
+            <property name="enableSubPackages" value="true"/>  
+        </sqlMapGenerator>  
+
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.qdingnet.pcloud.api.compass.dao" targetProject="src">
+            <property name="enableSubPackages" value="true"/>  
+        </javaClientGenerator>
+		<!--<table tableName="house_rent_customer_employee_report" domainObjectName="HouseRentCustomerEmployeeReport" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true"></table>-->
+		<!--<table tableName="house_rent_customer_store_report" domainObjectName="HouseRentCustomerStoreReport" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true"></table>-->
+		<!--<table tableName="house_rent_employee_report" domainObjectName="HouseRentEmployeeReport" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true"></table>-->
+		<!--<table tableName="house_rent_store_report" domainObjectName="HouseRentStoreReport" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true"></table>-->
+		<!--<table tableName="user" domainObjectName="User" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true"></table>-->
+		<!--<table tableName="dian_zan" domainObjectName="DianZan" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true"></table>-->
+		<!--<table tableName="declaration_comment" domainObjectName="DeclarationComment" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true"></table>-->
+		<table tableName="announce" domainObjectName="Announce" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true"></table>
+	</context>
+</generatorConfiguration>  
